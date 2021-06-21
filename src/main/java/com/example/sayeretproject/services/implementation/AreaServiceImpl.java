@@ -31,7 +31,6 @@ public class AreaServiceImpl extends UserService implements AreaService {
 
     @Override
     public void save() {
-//        List<Area> areas = new ArrayList<>();
         Area a1 = Area.builder().id(1).name("רמת הגולן").build();
         Area a2 = Area.builder().id(2).name("אצבע הגליל").build();
         Area a3 = Area.builder().id(3).name("גליל עליון").build();
@@ -49,12 +48,6 @@ public class AreaServiceImpl extends UserService implements AreaService {
         Area a15 = Area.builder().id(15).name("מישור החוף").build();
         Area a16 = Area.builder().id(16).name("נגב").build();
         Area a17 = Area.builder().id(17).name("ערבה").build();
-//        this.pointRepository.findAll().forEach(point -> {
-//            Area area = Area.builder().id(point.getAreaId()).area(point.getAreaName()).build();
-//            if (!areas.contains(area)) {
-//                areas.add(area);
-//            }
-//        });
 
         this.areaRepository.saveAll(Arrays.asList(a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17));
     }
@@ -63,8 +56,9 @@ public class AreaServiceImpl extends UserService implements AreaService {
     public List<Area> getAllAreas() {
         return this.areaRepository.findAll();
     }
+
     @Override
-    public void updateArea(Area area){
+    public void updateArea(Area area) {
         this.areaRepository.saveAndFlush(area);
     }
 }
