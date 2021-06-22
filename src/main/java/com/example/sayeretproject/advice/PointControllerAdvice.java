@@ -13,6 +13,6 @@ public class PointControllerAdvice {
     @ExceptionHandler(ExistException.class)
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     public ErrorDetails handleErrors(Exception e) {
-        return new ErrorDetails("CatException: Something went wrong!", e.getMessage(), 400);
+        return new ErrorDetails("PointException: Something went wrong!", e.getMessage(), 400);
     }
 }
