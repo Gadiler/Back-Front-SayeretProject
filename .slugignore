@@ -6,7 +6,10 @@
 /db/*.sqlite3-journal
 
 # Ignore all logfiles and tempfiles.
-/.*.jpg
+*.psd
+*.jpg
+/test
+/spec
 ./log
 ./tmp
 ./storage
